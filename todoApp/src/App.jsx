@@ -18,8 +18,12 @@ function App() {
         <button className={style.button}><AiOutlinePlus size={30} /></button>
       </form>
       <ul>
-        <Todo />
+        {todos.map((todo, index) => (
+          
+        <Todo key={index}  todo= {todo}/>
+          ))}
       </ul>
+      <p className={style.count}> You have 2 todos</p>
     </div>
    </div>
   )
